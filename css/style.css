@@ -95,12 +95,18 @@ figcaption h3 {
     background-color: white;
     color: #757575;
 }
+#main button:hover {
+    background-color: rgb(219, 219, 219);
+}
 
 #pegasus-btn {
     background-color: black !important;
     color: white !important;
 }
 
+#pegasus-btn:hover {
+    background-color: rgb(74, 74, 74) !important;
+}
 
 .content-grow{
     margin-top: 8.4rem;
@@ -159,12 +165,17 @@ figcaption h3 {
     color: #757575;
 }
 
+.list-menu-item a:hover {
+    color: #111;
+}
+
 footer{
     margin-top: 8rem;
     background: #111;
-    padding: 5rem 8rem 1.4rem 8rem;
+    padding: 4rem 8rem 0 8rem;
     font-size: 1.2rem;
     color: #7e7e7e;
+    position: relative;
 }
 
 #main-footer{
@@ -227,6 +238,7 @@ footer a:hover {
 
 }
 
+
 .social-link-icon:hover {
     fill: #ffffff;
     transition: fill .2s;
@@ -234,4 +246,39 @@ footer a:hover {
 
 .right-sub-footer li{
     padding: 0 1.2rem;
+}
+
+#sub-footer{
+    margin-top: 3rem;
+}
+
+.footer-title{
+    font-weight: 800;
+    color: white;
+}
+.list-item-right-subfooter{
+    padding: 0 1.2rem;
+    line-height: 4rem;/*(1)*/
+}
+.guides-dropdown-menu-box{
+    position: absolute;
+    bottom: 4rem; /*(1)*/
+    left: 50%;
+    display: none;
+}
+#guides-footer:hover .guides-dropdown-menu-box{
+    display: block;
+}
+
+#table-guides{
+    display: block;
+    padding-inline-start: 0;
+    line-height: 2.8rem;
+    padding: 2rem 2.8rem 2rem 0;
+    border: 2px solid #ffffff;
+    width: 90%;
+}
+#table-guides li{
+    display: inline-block;
+    width: 21rem;
 }
