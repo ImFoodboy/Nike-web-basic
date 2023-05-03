@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Nike Futura';
+    src: url('../fonts/Nike-Font/Futura\ Condensed\ Extra\ Bold.otf') format('truetype');
+}
+
+body{
+    width: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#container{
+    margin: 0 48px;
+}
+header {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+}
+
+#logo{
+    width: 6%;
+    float: left;
+}
+#logo svg {
+    transform: scale(1.25);
+}
+nav{
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    margin: 0;
+}
+nav ul li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 14px;
+    font-size: 1.6rem;
+}
+
+#action-btn{
+    width: 6%;
+    float: right;
+    line-height: 60px;
+}
+
+.search-input-box {
+    position: absolute;
+    width: 13%;
+    top: 0;
+    left:80%;
+    background-color: rgb(243, 243, 243);
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    border-radius: 60px;
+    padding-left: 8px;
+}
+
+.search-input-box i {
+    font-size: 1.8rem;
+}
+.search-input-box input {
+    font-size: 1.6rem;
+    font-weight: lighter;
+    margin-left: 5px;
+}
+
+.search-input-box input::placeholder {
+    font-size: 1.6rem;
+    color: rgb(215, 215, 215);
+}
+
+
+
+figure {
+    text-align: center;
+}
+figcaption {
+    padding-top: 4rem;    
+}
+
+figcaption h3 {
+    font-size: 6.6rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+#main button {
+    border-radius: 60px;
+    line-height: 3.2rem;
+    font-size: 1.7rem;
+    padding: 5px 2rem;
+    background-color: white;
+    color: #757575;
+}
+
+#pegasus-btn {
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.content-grow{
+    margin-top: 8.4rem;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 12px;
+    
+}
+
+.items{
+    position: relative;
+}
+
+.items img {
+    height: 100%;
+}
+
+.pegasus-types-btn{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top:85%;
+    margin-left: 5rem;
+}
+
+.title {
+    font-size: 2.4rem;
+    padding: 1.8rem 0;
+}
+
+.menu-box {
+    padding: 0 24rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 12px;
+    font-size: 1.6rem;
+    margin-top: 8rem;
+}
+
+.list-menu-item{
+    display: inline-block;
+    text-align: left;
+    line-height: 3.6rem;
+    padding: 0 1.2rem;
+}
+.list-menu-item h5{
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+.list-menu-item ul{
+    margin-top: 1rem;
+    color: #757575;
+}
+
+footer{
+    margin-top: 8rem;
+    background: #111;
+    padding: 5rem 8rem 1.4rem 8rem;
+    font-size: 1.2rem;
+    color: #7e7e7e;
+}
+
+#main-footer{
+    height: 20rem;
+}
+
+.footer-column{
+    display: inline-block;
+    width: 17%;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 3rem;
+}
+.footer-column h5 {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 800;
+}
+#contact-nike{
+    float: right;
+    text-align: right;
+}
+#contact-nike ul{
+    padding: auto;
+}
+.social-link-icon {
+    fill: #7e7e7e;
+    transition: fill .2s;
+    margin: 0 0.8rem;
+}
+.social-link-list{
+    display: inline-block;
+}
+.item-sub-footer {
+    display: inline-block;
+}
+.item-sub-footer h5, .item-sub-footer p, .item-sub-footer li {
+    display: inline-block;
+}
+
+.left-sub-footer {
+    float: left;
+}
+.right-sub-footer {
+    float: right;
+}
+footer h5{
+    color: white;
+}
+
+#footer-links{
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+
+}
+
+.social-link-icon:hover {
+    fill: #ffffff;
+    transition: fill .2s;
+}
+
+.right-sub-footer li{
+    padding: 0 1.2rem;
+}
