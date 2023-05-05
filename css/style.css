@@ -21,11 +21,34 @@ header {
     top: 0;
     left: 0;
     right: 0;
-
 }
 
 .top-header {
     height: 4rem;
+    margin: 0 48px;
+    font-size: 1.3rem;
+}
+#left-top-header, #right-top-header, #right-top-header li{
+    display: inline-block;
+    line-height: 4rem;
+}
+.top-header a svg, #logo-nike {
+    fill: #000000;
+}
+.top-header a:hover svg, #logo-nike:hover {
+    fill: #757575;
+    transition: fill .1s;
+}
+.top-header li:hover{
+    color: #757575;
+}
+#right-top-header li{
+    padding: 0 5px;
+}
+
+#right-top-header{
+    float: right;
+    clear: both;
 }
 
 .header-nav {
@@ -35,8 +58,17 @@ header {
     margin: 0 48px;
 }
 
-marquee {
+marquee{
     height: 6rem;
+    background-color: rgb(223, 223, 223);
+    vertical-align: middle;
+}
+marquee div {
+    height: 100%;
+    line-height: 6rem;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Nike Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #logo {
@@ -99,11 +131,15 @@ nav {
 
 
 figure {
-    text-align: center;
+    /* text-align: center; */
+    position: relative;
 }
 
 figcaption {
-    padding-top: 4rem;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    color: #ffffff;
 }
 
 figcaption h3 {
@@ -128,12 +164,12 @@ figcaption h3 {
 }
 
 #pegasus-btn {
-    background-color: black !important;
-    color: white !important;
+    background-color: white !important;
+    color: #757575 !important;
 }
 
 #pegasus-btn:hover {
-    background-color: rgb(74, 74, 74) !important;
+    background-color: rgb(222, 222, 222) !important;
 }
 
 .content-grow {
