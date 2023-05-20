@@ -12,7 +12,6 @@ body {
 
 #main {
     margin: 0 48px;
-    min-height: 40rem;
 }
 
 header {
@@ -27,9 +26,9 @@ header {
 .top-header {
     height: 4rem;
     margin: 0 48px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
-#right-top-header, #right-top-header li{
+#left-top-header, #right-top-header, #right-top-header li{
     display: inline-block;
     line-height: 4rem;
 }
@@ -45,7 +44,6 @@ header {
 }
 #right-top-header li{
     padding: 0 5px;
-    cursor: pointer;
 }
 
 #right-top-header{
@@ -58,19 +56,6 @@ header {
     position: relative;
     background-color: #ffffff;
     margin: 0 48px;
-}
-
-marquee{
-    height: 6rem;
-    background-color: rgb(223, 223, 223);
-    vertical-align: middle;
-}
-marquee div {
-    height: 100%;
-    line-height: 6rem;
-    text-transform: uppercase;
-    font-style: italic;
-    font-family: "Nike Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #logo {
@@ -131,27 +116,6 @@ nav {
 }
 
 
-
-figure {
-    /* text-align: center; */
-    position: relative;
-}
-
-figcaption {
-    position: absolute;
-    bottom: 25%;
-    left: 10%;
-    color: #ffffff;
-}
-
-figcaption h3 {
-    font-size: 6.6rem;
-    line-height: 0.9;
-    text-transform: uppercase;
-    font-family: "Nike Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-
 #main button {
     border-radius: 60px;
     line-height: 3.2rem;
@@ -206,37 +170,6 @@ figcaption h3 {
     padding: 1.8rem 0;
 }
 
-.menu-box {
-    padding: 0 24rem;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 12px;
-    font-size: 1.6rem;
-    margin-top: 8rem;
-}
-
-.list-menu-item {
-    display: inline-block;
-    text-align: left;
-    line-height: 3.6rem;
-    padding: 0 1.2rem;
-}
-
-.list-menu-item h5 {
-    font-size: 1.6rem;
-    font-weight: lighter;
-}
-
-.list-menu-item ul {
-    margin-top: 1rem;
-    color: #757575;
-}
-
-.list-menu-item a:hover {
-    color: #111;
-}
-
 footer {
     margin-top: 8rem;
     background: #111;
@@ -244,7 +177,6 @@ footer {
     font-size: 1.2rem;
     color: #7e7e7e;
     position: relative;
-    clear: both;
 }
 
 #main-footer {
@@ -383,7 +315,7 @@ footer a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 1;
+    opacity: 0;
     background-color: #757575;
     background-color: hsla(0, 0%, 7%, .36);
     -webkit-backdrop-filter: blur(4px);
@@ -391,7 +323,7 @@ footer a:hover {
     position: fixed;
     display: block;
     visibility: hidden;
-    
+    transition: opacity 0.8s ease, visibility 0.25s ease;
 }
 .sub-nav-box li {
     opacity: 0;
@@ -453,35 +385,4 @@ footer a:hover {
     font-size: 1.4rem;
     width: 21rem;
     line-height: 1.8;
-}
-
-.items-favorite{
-    width: 100%;
-    min-height: 15rem;
-    vertical-align: middle;
-} 
-.items-favorite h3{
-    text-align: center;
-    font-weight: lighter;
-    margin-top: 5rem;
-}
-
-.contact-item{
-    text-align: center;
-    margin-top: 3rem;
-}
-.contact-item img{
-    height: 8rem;
-}
-
-#about-us{
-    width: 50%;
-    margin: 3rem auto;
-    color: #232323;
-    font-size: 2rem;
-    font-family: "Libre Baskerville",georgia,serif;
-}
-#about-us p{
-    margin-bottom: 2rem;
-    margin-top: 1rem;
 }

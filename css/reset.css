@@ -35,7 +35,7 @@
   }
   
   /* Remove default form field styles */
-  input, textarea, select {
+  input[type="text"], input[type="password"], textarea, select {
     font-size: inherit;
     font-family: inherit;
     border: none;
