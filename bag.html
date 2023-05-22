@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bag.css">
+
     <title>Bag, Nike Store</title>
 </head>
 
@@ -18,9 +20,10 @@
             <div class="top-header">
                 <div id="right-top-header">
                     <ul>
-                        <li><a target="_blank" href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">
-                            Find a store
-                        </a></li>
+                        <li><a target="_blank"
+                                href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">
+                                Find a store
+                            </a></li>
                         | <li><a href="./sign-in.html">Sign In</a></li>
                         | <li><a href="./sign-up.html">Sign Up</a></li>
                     </ul>
@@ -397,34 +400,192 @@
 
         <div id="main">
             <div id="content">
-                <div class="content-grow favorite">
-                    <section class="title">
-                        Bag
-                    </section>
-                    <div class="items-favorite">
-                        <h3>Items added to your Favourites will be saved here.</h3>
+                <div id="main">
+                    <div id="left-content">
+                        <div class="content-grow bag">
+                            <section class="title">
+                                Bag
+                            </section>
+                            <div class="bag">
+                                <!-- <h3 id="no-items">There are no items in your bag.</h3> -->
+                                <div class="bag-items">
+                                    <div class="bag-items-img">
+                                        <a href="#">
+                                            <img src="https://secure-images.nike.com/is/image/DotCom/DX0915_276?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="bag-items-infomation">
+                                        <div class="bag-items-infomation-details">
+                                            <a class="details-title" href="#">Nike Dri-FIT Challenger</a>
+                                            <p class="details-describe">
+                                                Men's 18cm (approx.) Unlined Versatile Shorts <br>
+                                                Neutral Olive/Dark Russet/Black/Sequoia
+                                            </p>
+                                            <div class="details-options">
+                                                <div class="select-line">
+                                                    <label for="">Size: </label>
+                                                    <select name="details-options-size" id="details-options-size">
+                                                        <option value="S">S</option>
+                                                        <option value="M">M</option>
+                                                        <option value="L">L</option>
+                                                        <option value="XL">XL</option>
+                                                        <option value="XXL">XXL</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+
+                                                <div class="select-line">
+                                                    <label for="">Quantity: </label>
+                                                    <select name="details-options-quantity"
+                                                        id="details-options-quantity">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="1">6</option>
+                                                        <option value="2">7</option>
+                                                        <option value="3">8</option>
+                                                        <option value="4">9</option>
+                                                        <option value="5">10</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear-bag-items">
+                                            <button class="clear-item">
+                                                <i class="fa-regular fa-trash-can"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="bag-items-money">
+                                        <span class="money prices">1,119,000</span>
+                                        <span class="unit-money">đ</span>
+                                    </div>
+                                    <div class="line-seperate"></div>
+                                </div>
+
+                                <div class="bag-items">
+                                    <div class="bag-items-img">
+                                        <a href="#">
+                                            <img src="https://secure-images.nike.com/is/image/DotCom/DX0915_276?align=0,1&cropN=0,0,0,0&resMode=sharp&bgc=f5f5f5&wid=150&fmt=jpg"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="bag-items-infomation">
+                                        <div class="bag-items-infomation-details">
+                                            <a class="details-title" href="#">Nike Dri-FIT Challenger</a>
+                                            <p class="details-describe">
+                                                Men's 18cm (approx.) Unlined Versatile Shorts <br>
+                                                Neutral Olive/Dark Russet/Black/Sequoia
+                                            </p>
+                                            <div class="details-options">
+                                                <div class="select-line">
+                                                    <label for="">Size: </label>
+                                                    <select name="details-options-size" id="details-options-size">
+                                                        <option value="S">S</option>
+                                                        <option value="M">M</option>
+                                                        <option value="L">L</option>
+                                                        <option value="XL">XL</option>
+                                                        <option value="XXL">XXL</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+
+                                                <div class="select-line">
+                                                    <label for="">Quantity: </label>
+                                                    <select name="details-options-quantity"
+                                                        id="details-options-quantity">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="1">6</option>
+                                                        <option value="2">7</option>
+                                                        <option value="3">8</option>
+                                                        <option value="4">9</option>
+                                                        <option value="5">10</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear-bag-items">
+                                            <button class="clear-item">
+                                                <i class="fa-regular fa-trash-can"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="bag-items-money">
+                                        <span class="money prices">2,223,000</span>
+                                        <span class="unit-money">đ</span>
+                                    </div>
+                                    <div class="line-seperate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-content">
+                        <div id="summary-box">
+                            <section class="title">
+                                Summary
+                            </section>
+
+                            <div class="sub-total-line">
+                                <div class="summary-box-line">
+                                    <label for="">Subtotal</label>
+                                    <div class="summary-box-money-items">
+                                        <span class="money" id="sub-total">1,119,000</span>
+                                        <span class="unit-money">đ</span>
+                                    </div>
+                                </div>
+                                <div class="summary-box-line">
+                                    <label for="">Estimated Delivery & Handling</label>
+                                    <div class="summary-box-money-items">
+                                        <span class="money" id="delivery-fee"></span>
+                                        <span class="unit-money">đ</span>
+                                    </div>
+                                </div>
+                                <div class="line-seperate"></div>
+                            </div>
+                            <div id="total-line">
+                                <div class="summary-box-line">
+                                    <label for="">Total</label>
+                                    <div class="summary-box-money-items">
+                                        <span class="money" id="total">1,119,000</span>
+                                        <span class="unit-money">đ</span>
+                                    </div>
+                                </div>
+                                <div class="line-seperate"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="content-grow">
-                    <section class="title">
-                        Find Your Next Favourite
-                    </section>
-                    <div class="items">
-                        <a href="#">
-                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b62f7bd2-da50-418b-ba36-2eef2728c37f/dri-fit-trail-short-sleeve-tee-PVG0Zd.png"
-                                alt="">
-                            <button class="pegasus-types-btn ">Women's</button>
-                        </a>
-                        <a href="#">
-                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/042982f6-b876-43c9-bcb2-2326fd5aa036/jordan-flight-mvp-85-t-shirt-fKFszL.png"
-                                alt="">
-                            <button class="pegasus-types-btn ">Men's</button>
-                        </a>
-                        <a href="#">
-                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/92fb0812-e8f1-47cb-8137-cc9e29c655a6/sportswear-club-fleece-older-french-terry-short-sleeve-sweatshirt-g1xbt4.png"
-                                alt="">
-                            <button class="pegasus-types-btn ">Kid's</button>
-                        </a>
+                <div class="submain">
+                    <div class="content-grow">
+                        <section class="title">
+                            You Might Also Like
+                        </section>
+                        <div class="items">
+                            <a href="#">
+                                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b62f7bd2-da50-418b-ba36-2eef2728c37f/dri-fit-trail-short-sleeve-tee-PVG0Zd.png"
+                                    alt="">
+                                <button class="pegasus-types-btn ">Women's</button>
+                            </a>
+                            <a href="#">
+                                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/042982f6-b876-43c9-bcb2-2326fd5aa036/jordan-flight-mvp-85-t-shirt-fKFszL.png"
+                                    alt="">
+                                <button class="pegasus-types-btn ">Men's</button>
+                            </a>
+                            <a href="#">
+                                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/92fb0812-e8f1-47cb-8137-cc9e29c655a6/sportswear-club-fleece-older-french-terry-short-sleeve-sweatshirt-g1xbt4.png"
+                                    alt="">
+                                <button class="pegasus-types-btn ">Kid's</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -436,7 +597,9 @@
         <div id="main-footer">
             <div class="footer-column" id="footer-links">
                 <ul>
-                    <li><a target="blank" href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">Find a store</a></li>
+                    <li><a target="blank"
+                            href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">Find
+                            a store</a></li>
                     <li><a target="blank" href="./become-member.html">Become a member</a></li>
                     <li><a target="blank" href="./sign-up.html">Sign up for email</a></li>
                     <li><a target="blank" href="#site-feedback">Send us feedback</a></li>
@@ -505,7 +668,9 @@
         </div>
         <div id="sub-footer">
             <div class="left-sub-footer item-sub-footer">
-                <h5><a target="blank" href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1"><i class="fa-solid fa-location-dot"></i> VietNam</a></h5>
+                <h5><a target="blank"
+                        href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1"><i
+                            class="fa-solid fa-location-dot"></i> VietNam</a></h5>
                 <p>© 2023 Nike, Inc. All Rights Reserved</p>
             </div>
             <div class="right-sub-footer item-sub-footer">
@@ -565,8 +730,7 @@
                     <li class="list-item-right-subfooter"><a target="blank"
                             href="https://agreementservice.svs.nike.com/vn/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike&country=VN&language=en&requestType=redirect">Terms
                             of Use</a></li>
-                    <li class="list-item-right-subfooter"><a target="blank"
-                            href="./policy.html">Nike
+                    <li class="list-item-right-subfooter"><a target="blank" href="./policy.html">Nike
                             Privacy Policy</a></li>
                 </ul>
             </div>
@@ -590,6 +754,10 @@
                 });
             });
         }
+    </script>
+    <script src="./js/bag.js"></script>
+    <script>
+        Summary();
     </script>
 </body>
 
