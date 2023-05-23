@@ -3,17 +3,25 @@
 }
 .items-favorite {
     grid-gap: 3rem;
+    min-height: 70rem;
 }
 
 .items-favorite img{
     height: 90%;
 }
 
+.favorite-item{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+}
+
 .item-img, .items-infomation-details, .items-money{
     display: inline-block;
     vertical-align: top;
 }
-
+.items-infomation-details{
+    min-height: 8rem;
+}
 .items-money{
     float: right;
 }
@@ -37,15 +45,15 @@
     color: white !important;
 }
 
-.unfavorite-btn {
+.unfavorite-btn , .add-bag-btn {
     width: fit-content;
     padding: 0 !important;
     vertical-align: middle;
     margin-left: 1rem;
 }
-.unfavorite-btn:hover {
+.unfavorite-btn:hover, .add-bag-btn{
     background-color: transparent !important;
 }
-.unfavorite-btn i{
+.unfavorite-btn i, .add-bag-btn{
     font-size: 3rem;
 }

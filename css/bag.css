@@ -41,6 +41,10 @@
     margin-left: 3rem;
 }
 
+.bag-items-img{
+    width: 15rem;
+    height: 15rem;
+}
 .bag-items-money{
     float: right;
 }
