@@ -19,9 +19,10 @@
             <div class="top-header">
                 <div id="right-top-header">
                     <ul>
-                        <li><a target="_blank" href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">
-                            Find a store
-                        </a></li>
+                        <li><a target="_blank"
+                                href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">
+                                Find a store
+                            </a></li>
                         | <li><a href="./sign-in.html">Sign In</a></li>
                         | <li><a href="./sign-up.html">Sign Up</a></li>
                     </ul>
@@ -401,18 +402,30 @@
                 <h3 class="title-content">Men's Shoes</h3>
                 <div class="menu-content">
                     <ul id="menu-content-list">
-                        <a href="#"><li>Lifestyle</li></a>
-                        <a href="#"><li>Jordan</li></a>
-                        <a href="#"><li>Running</li></a>
-                        <a href="#"><li>Basketball</li></a>
-                        <a href="#"><li>Football</li></a>
-                        <a href="#"><li>Training & Gym</li></a>
+                        <a href="#">
+                            <li>Lifestyle</li>
+                        </a>
+                        <a href="#">
+                            <li>Jordan</li>
+                        </a>
+                        <a href="#">
+                            <li>Running</li>
+                        </a>
+                        <a href="#">
+                            <li>Basketball</li>
+                        </a>
+                        <a href="#">
+                            <li>Football</li>
+                        </a>
+                        <a href="#">
+                            <li>Training & Gym</li>
+                        </a>
                     </ul>
                     <div class="line-seperate"></div>
                 </div>
                 <div id="main-content">
-                    <iframe src="./carts-shoes.html" frameborder="0"></iframe>
-                    
+                    <iframe id="main-frame" src="./carts-shoes.html" frameborder="0"></iframe>
+
                 </div>
                 <div class="line-seperate"></div>
             </div>
@@ -495,7 +508,9 @@
         <div id="main-footer">
             <div class="footer-column" id="footer-links">
                 <ul>
-                    <li><a target="blank" href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">Find a store</a></li>
+                    <li><a target="blank"
+                            href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">Find
+                            a store</a></li>
                     <li><a target="blank" href="./sign-in.html">Become a member</a></li>
                     <li><a target="blank" href="./sign-up.html">Sign up for email</a></li>
                     <li><a target="blank" href="./feedback.html">Send us feedback</a></li>
@@ -556,7 +571,9 @@
         </div>
         <div id="sub-footer">
             <div class="left-sub-footer item-sub-footer">
-                <h5><a target="blank" href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1"><i class="fa-solid fa-location-dot"></i> VietNam</a></h5>
+                <h5><a target="blank"
+                        href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1"><i
+                            class="fa-solid fa-location-dot"></i> VietNam</a></h5>
                 <p>© 2023 Nike, Inc. All Rights Reserved</p>
             </div>
             <div class="right-sub-footer item-sub-footer">
@@ -610,11 +627,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="list-item-right-subfooter"><a target="blank"
-                            href="./term-of-uses.html">Terms
+                    <li class="list-item-right-subfooter"><a target="blank" href="./term-of-uses.html">Terms
                             of Use</a></li>
-                    <li class="list-item-right-subfooter"><a target="blank"
-                            href="./policy.html">Nike
+                    <li class="list-item-right-subfooter"><a target="blank" href="./policy.html">Nike
                             Privacy Policy</a></li>
                 </ul>
             </div>
@@ -640,6 +655,52 @@
                 });
             });
         }
+    </script>
+    <script>
+
+        function getCartItemFather(element, selector) {
+            while (element.parentElement) {
+                if (element.parentElement.matches(selector)) {
+                    return element.parentElement;
+                }
+                element = element.parentElement;
+            }
+        }
+
+        const iframe = document.getElementById('main-frame');
+
+        // Lắng nghe sự kiện click trên thẻ <a> bên trong iframe
+        iframe.addEventListener('load', function () {
+            const iframeContent = iframe.contentDocument || iframe.contentWindow.document;
+            const toSingleProductSelector = iframeContent.querySelectorAll('.go-to-single-product');
+
+            for (let i = 0; i < toSingleProductSelector.length; i++) {
+                toSingleProductSelector[i].addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const cardItemFather = getCartItemFather(toSingleProductSelector[i], '.cart-items');
+                    var elementInfo = {
+                        id: cardItemFather.id,
+                        avatarImg: cardItemFather.querySelector('.cart-items-img').querySelector('img').src,
+                        title: cardItemFather.querySelector('.details-title').innerText,
+                        describe: cardItemFather.querySelector('.details-describe').innerText,
+                        prices: cardItemFather.querySelector('.prices').innerText
+                    };
+                    // console.log(elementInfo);
+
+                    // Chuyển đối tượng JSON thành chuỗi
+                    var jsonString = JSON.stringify(elementInfo);
+                    sessionStorage.clear();
+                    sessionStorage.setItem(cardItemFather.id, jsonString);
+
+                    // Lấy href của liên kết
+                    const url = this.href;
+
+                    // Mở liên kết trong tab hiện tại
+                    window.open(url, '_self');
+                });
+            }
+        });
+
     </script>
 </body>
 

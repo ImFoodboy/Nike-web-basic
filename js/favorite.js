@@ -11,11 +11,16 @@ function deleteInfoFavorite(id) {
     localStorage.removeItem(id + "-favorite");
 }
 
-function getCardItemsElement(element) {
-    return element.parentElement.parentElement;
+function getCardItemsElement(element, selector) {
+    while (element.parentElement) {
+        if (element.parentElement.matches(selector)) {
+            return element.parentElement;
+        }
+        element = element.parentElement;
+    }
 }
 
-function Favourite(){
+function Favourite(father){
     const favoriteBtns = document.querySelectorAll('.unfavorite-btn');
     favoriteBtns.forEach(function (element) {
         element.onclick = function () {
@@ -27,8 +32,7 @@ function Favourite(){
                 element.classList.add('favorite-btn');
     
                 //localStorage
-                deleteInfoFavorite(getCardItemsElement(element).id);
-    
+                deleteInfoFavorite(getCardItemsElement(element, father).id);
             }
             else {
                 //css
@@ -37,7 +41,7 @@ function Favourite(){
                 element.classList.remove('favorite-btn');
 
                 //localStorage
-                const cardItemsElement = getCardItemsElement(element);
+                const cardItemsElement = getCardItemsElement(element, father);
                 var elementInfo = {
                     id: cardItemsElement.id,
                     avatarImg: cardItemsElement.querySelector('.cart-items-img').querySelector('img').src,

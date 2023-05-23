@@ -41,8 +41,6 @@ function AddToBag() {
                 // Chuyển đối tượng JSON thành chuỗi
                 var jsonString = JSON.stringify(elementInfo);
                 saveInfoBag(cardItemsElement.id, jsonString);
-
-
             }
             else {
                 //css
