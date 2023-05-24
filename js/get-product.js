@@ -14,13 +14,13 @@ function putProductChildToPage(child) {
 }
 
 
-function loadProduct() {
+function loadShoesProduct() {
     // Lặp qua các key trong sessionStorage
     for (var i = 0; i < sessionStorage.length; i++) {
         var key = sessionStorage.key(i);
 
         // Kiểm tra key chứa "shoes" hoặc "clothing"
-        if (key.includes("shoes") || key.includes("clothing")) {
+        if (key.includes("shoes")) {
             var value = JSON.parse(sessionStorage.getItem(key));
             break;
         }
@@ -49,4 +49,21 @@ function AddToBagThisProduct(size){
     // Chuyển đối tượng JSON thành chuỗi
     var jsonString = JSON.stringify(value);
     localStorage.setItem(value.id + "-bag", jsonString);
+}
+
+function loadClothingProduct() {
+    // Lặp qua các key trong sessionStorage
+    for (var i = 0; i < sessionStorage.length; i++) {
+        var key = sessionStorage.key(i);
+
+        // Kiểm tra key chứa "shoes" hoặc "clothing"
+        if (key.includes("clothing")) {
+            var value = JSON.parse(sessionStorage.getItem(key));
+            break;
+        }
+    }
+
+    if (value) {
+        putProductChildToPage(value);
+    }
 }
