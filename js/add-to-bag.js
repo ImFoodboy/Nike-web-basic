@@ -89,7 +89,7 @@ function createDetailsOptionsTag() {
     labelQuantity.textContent = "Quantity: ";
     var selectQuantity = document.createElement("select");
     selectQuantity.name = "details-options-quantity";
-    selectQuantity.id = "details-options-quantity";
+    selectQuantity.classList.add("details-options-quantity");
     var quantityOptions = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     quantityOptions.forEach(function (optionValue) {
         var option = document.createElement("option");

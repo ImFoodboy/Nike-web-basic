@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/favorite.css">
-    <title>Favorites</title>
+    <link rel="stylesheet" href="./css/checkout.css">
+    <title>Checkout</title>
 </head>
 
 
@@ -24,7 +24,6 @@
                                 Find a store
                             </a></li>
                         <li>| <a href="./sign-in.html" id="sign-in">Sign In</a></li>
-                        <li>| <a href="./sign-up.html" id="sign-up">Sign Up</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +41,7 @@
                     <nav>
                         <ul id="nav">
                             <li class="nav-item">
-                                <a class="nav-item-title" href="./index.html"
+                                <a class="nav-item-title" href="./index.html" target="_blank"
                                     rel="noopener noreferrer">Home</a>
                                 <div class="sub-nav-box">
                                     <ul class="sub-nav">
@@ -86,7 +85,8 @@
                 </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/men-clothing.html" target="_blank" rel="noopener noreferrer">Men</a>
+                    <a class="nav-item-title" href="./product-pages/men-shoes.html" target="_blank"
+                        rel="noopener noreferrer">Men</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -127,7 +127,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/women-clothing.html" target="_blank" rel="noopener noreferrer">Women</a>
+                    <a class="nav-item-title" href="./product-pages/women-shoes.html" target="_blank"
+                        rel="noopener noreferrer">Women</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -168,7 +169,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/kid-clothing.html" target="_blank" rel="noopener noreferrer">Kids</a>
+                    <a class="nav-item-title" href="./product-pages/kid-shoes.html" target="_blank"
+                        rel="noopener noreferrer">Kids</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -209,7 +211,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/kid-clothing.html" target="_blank" rel="noopener noreferrer">Sale</a>
+                    <a class="nav-item-title" href="./product-pages/kid-shoes.html" target="_blank"
+                        rel="noopener noreferrer">Sale</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -261,84 +264,130 @@
         </header>
 
         <div id="main">
-            <div id="content">
-                <div class="content-grow favorite">
-                    <section class="title">
-                        Favorites
-                    </section>
-                    <div class="favorite-content">
-                        <div class="items-favorite items">
-                            <!-- <h3>Items added to your Favourites will be saved here.</h3> -->
-                            <!-- <div class="favorite-item" id="sport-1">
-                                <div class="item-img">
-                                    <a href="#">
-                                        <img src="https://secure-images.nike.com/is/image/DotCom/DZ0573_010?align=0,1&cropN=0,0,0,0&resMode=sharp&fmt=jpg&wid=592&bgc=f5f5f5"
-                                            alt="">
-                                    </a>
+            <div class="content">
+                <div id="left-content">
+                    <div class="form-check-out">
+                        <h3 class="form-title">Enter your name and address:</h3>
+                        <form id="form-1" action="/action_page.php" method="get">
+                            <div class="form-group">
+                                <input id="first-name" name="firstName" type="text" placeholder="First name">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="last-name" name="lastName" type="text" placeholder="Last name">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input id="email-contact" name="emailContact" type="text" placeholder="Email address">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Phone number">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="address-contact" name="address" type="text" placeholder="Address">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group select-line">
+                                <select name="province">
+                                    <option value="">Chọn tỉnh/thành phố</option>
+                                    <option value="Hà Nội">Hà Nội</option>
+                                    <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                    <option value="Đà Nẵng">Đà Nẵng</option>
+                                    <option value="Hải Phòng">Hải Phòng</option>
+                                    <option value="Cần Thơ">Cần Thơ</option>
+                                    <!-- Thêm các option cho 49 tỉnh thành còn lại -->
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="form-group select-line">
+                                <select name="nation">
+                                    <option value="vietnam">Vietnam</option>
+                                    <option value="china">China</option>
+                                    <option value="united-states">United States</option>
+                                    <option value="india">India</option>
+                                    <option value="indonesia">Indonesia</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="brazil">Brazil</option>
+                                    <option value="nigeria">Nigeria</option>
+                                    <option value="bangladesh">Bangladesh</option>
+                                    <option value="russia">Russia</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="mexico">Mexico</option>
+                                    <option value="philippines">Philippines</option>
+                                    <option value="ethiopia">Ethiopia</option>
+                                    <option value="egypt">Egypt</option>
+                                    <option value="germany">Germany</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Chọn phương thức thanh toán:</label>
+                                <input class="radio btn-checked" type="button" id="cash-payment"
+                                    value="Thanh toán bằng tiền mặt">
+                                <input class="radio" type="button" id="banking-payment"
+                                    value="Thanh toán qua chuyển khoản ngân hàng">
+                                <span class="form-message" style="clear: both;"></span>
+                            </div>
+                            <div class="form-about-policy">
+                                <div class="check-box">
+                                    <input type="checkbox" checked id="agree-policy" value="agree-policy">
+                                    <label for="">I agree to abide by the Nike's <a href="./policy.html">Policy</a> And
+                                        <a href="/term-of-uses.html">Terms</a></label>
                                 </div>
-                                <div class="items-infomation-details">
-                                    <a class="details-title" href="#">Nike Dri-FIT Challenger</a>
-                                    <p class="details-describe">
-                                        Men's 18cm (approx.) Unlined Versatile Shorts <br>
-                                        Neutral Olive/Dark Russet/Black/Sequoia
-                                    </p>
-                                </div>
-                                <div class="items-money">
-                                    <span class="money prices">2,223,000</span>
+                                <div style="clear: both;"></div>
+                            </div>
+                            <div class="submit">
+                                <button id="order-btn">Order</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="right-content">
+                    <div id="summary-box">
+                        <section class="title">
+                            Summary
+                        </section>
+
+                        <div class="sub-total-line">
+                            <div class="summary-box-line">
+                                <label for="">Subtotal</label>
+                                <div class="summary-box-money-items">
+                                    <span class="money" id="sub-total">0</span>
                                     <span class="unit-money">đ</span>
                                 </div>
-                                <div class="to-product-details">
-                                    <button class="details-btn">Go to product details</button>
-                                    <button class="unfavorite-btn"><i class="fa-solid fa-heart"></i></button>
-                                </div>
-                            </div> -->
-                            <!-- <div class="favorite-item" id="shoes-2">
-                                <div class="item-img cart-items-img">
-                                    <a href="#">
-                                        <img
-                                            src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8dfa191-60b3-44c1-b730-b25e0a908c35/air-force-1-07-flyease-shoes-LKXPhZ.png"
-                                            alt="">
-                                    </a>
-                                </div>
-                                <div class="items-infomation-details">
-                                    <a class="details-title" href="#">Nike Air Force 1 '07 FlyEase</a>
-                                    <p class="details-describe">Men's Shoes</p>
-                                </div>
-                                <div class="items-money">
-                                    <span class="money prices">2,223,000</span>
+                            </div>
+                            <div class="summary-box-line">
+                                <label for="">Delivery/Shipping</label>
+                                <div class="summary-box-money-items">
+                                    <span class="money" id="delivery-fee">0</span>
                                     <span class="unit-money">đ</span>
                                 </div>
-                                <div class="to-product-details">
-                                    <button class="details-btn">Go to product details</button>
-                                    <button class="unfavorite-btn"><i class="fa-solid fa-heart"></i></button>
+                            </div>
+                            <div class="line-seperate"></div>
+                        </div>
+                        <div id="total-line">
+                            <div class="summary-box-line">
+                                <label for="">Total</label>
+                                <div class="summary-box-money-items">
+                                    <span class="money" id="total">0</span>
+                                    <span class="unit-money">đ</span>
                                 </div>
-                            </div> -->
+                            </div>
+                            <div class="line-seperate"></div>
                         </div>
                     </div>
                 </div>
-                <div class="content-grow">
-                    <section class="title">
-                        Find Your Next Favourite
-                    </section>
-                    <div class="items">
-                        <a href="./product-pages/women-clothing.html">
-                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b62f7bd2-da50-418b-ba36-2eef2728c37f/dri-fit-trail-short-sleeve-tee-PVG0Zd.png"
-                                alt="">
-                            <button class="pegasus-types-btn ">Women's</button>
-                        </a>
-                        <a href="./product-pages/men-clothing.html">
-                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/042982f6-b876-43c9-bcb2-2326fd5aa036/jordan-flight-mvp-85-t-shirt-fKFszL.png"
-                                alt="">
-                            <button class="pegasus-types-btn ">Men's</button>
-                        </a>
-                        <a href="./product-pages/kid-clothing.html">
-                            <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/92fb0812-e8f1-47cb-8137-cc9e29c655a6/sportswear-club-fleece-older-french-terry-short-sleeve-sweatshirt-g1xbt4.png"
-                                alt="">
-                            <button class="pegasus-types-btn ">Kid's</button>
-                        </a>
-                    </div>
-                </div>
             </div>
+            <form action="/index.html" id="form-2" method="get" style="display: none;">
+                <h3 class="form-header-tile">Thank you for your order !<br>^_^</h3>
+                <div class="submit">
+                    <button id="go-to-homepage-btn">Go to homepage</button>
+                </div>
+            </form>
         </div>
 
     </div>
@@ -351,7 +400,7 @@
                             href="https://www.google.com/maps/search/Nike/@10.7865558,106.62541,13z/data=!3m1!4b1">Find
                             a store</a></li>
                     <li><a target="blank" href="./sign-in.html">Become a member</a></li>
-                    <li><a target="blank" href="./sign-up.html">Sign up for email</a></li>
+                    <li><a target="blank" href="#">Sign up for email</a></li>
                     <li><a target="blank" href="./feedback.html">Send us feedback</a></li>
                 </ul>
             </div>
@@ -491,40 +540,66 @@
                     blurScreen.style.visibility = 'hidden';
                 });
             });
-        }
-    </script>
 
-    
-    <script src="./js/favorite.js"></script>
-    <script>
-        //Lắng nghe sự kiện: khi mà cái DOM content được tải rồi thì cái function () sau đó mới thực hiện
-        document.addEventListener('DOMContentLoaded', function () {
-            loadItemsFavorite('.items-favorite');
-            Favourite('.favorite-item');
+        }
+        const radios = document.querySelectorAll('.radio');
+
+        radios.forEach(radio => {
+            radio.addEventListener('click', () => {
+                radios.forEach(radio => radio.classList.remove('btn-checked'));
+                radio.classList.add('btn-checked');
+                // console.log(radio);
+            });
         });
     </script>
+
     <script>
-        const signUp = document.querySelector('#sign-up');
-        const signIn = document.querySelector('#sign-in');
+        var isHavingSubTotal = false;
         // Lặp qua các key trong sessionStorage
-        for (var i = 0; i < localStorage.length; i++) {
-            var key = localStorage.key(i);
+        for (var i = 0; i < sessionStorage.length; i++) {
+            var key = sessionStorage.key(i);
 
             // Kiểm tra key chứa "shoes" hoặc "clothing"
-            if (key.includes("@gmail")) {
-                var value = JSON.parse(localStorage.getItem(key));
+            if (key.includes("subTotal")) {
+                isHavingSubTotal = true;
                 break;
             }
         }
-        var emailName = value.emailSignin;
-        if (emailName) {
-            signUp.parentElement.style.display = "none";
-            signIn.textContent = emailName;
+        if (isHavingSubTotal) {
+            document.querySelector('#sub-total').textContent = sessionStorage.getItem('subTotal');
+            document.querySelector('#delivery-fee').textContent = sessionStorage.getItem('deliveryFee');
+            document.querySelector('#total').textContent = sessionStorage.getItem('total');
         }
-        else {
-            signUp.parentElement.style.display = "inline-block";
-            signIn.textContent = "Sign In";
-        }
+    </script>
+
+
+    <script src="./js/validator.js"></script>
+    <script>
+        //Lắng nghe sự kiện: khi mà cái DOM content được tải rồi thì cái function () sau đó mới thực hiện
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mong muốn của chúng ta
+
+            Validator({
+                form: '#form-1',
+                formGroupSelector: '.form-group',
+                errorSelector: '.form-message',
+                submitSelector: '#order-btn',
+                rules: [
+                    Validator.isEmail('#email-contact', 'Please enter a valid email address.'),
+                    Validator.isRequired('#first-name', 'Please enter a valid first name.'),
+                    Validator.isRequired('#last-name', 'Please enter a valid last name.'),
+                    Validator.isTelePhoneNumber('#phoneNumber', 'Please enter a valid telephone number.'),
+                    Validator.isRequired('#address-contact', 'Please enter a valid address.')
+                ],
+                onSubmit: function (data) {
+                    // Call API
+                    // console.log(data);
+                    document.querySelector('.content').style.display = 'none';
+                    document.querySelector('#form-2').style.display = 'block';
+                }
+            });
+
+        });
     </script>
 </body>
 

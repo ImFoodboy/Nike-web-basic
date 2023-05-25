@@ -43,8 +43,7 @@
                     <nav>
                         <ul id="nav">
                             <li class="nav-item">
-                                <a class="nav-item-title" href="./index.html"
-                                    rel="noopener noreferrer">Home</a>
+                                <a class="nav-item-title" href="./index.html" rel="noopener noreferrer">Home</a>
                                 <div class="sub-nav-box">
                                     <ul class="sub-nav">
                                         <li class="sub-nav-item">
@@ -87,7 +86,8 @@
                 </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/men-clothing.html" target="_blank" rel="noopener noreferrer">Men</a>
+                    <a class="nav-item-title" href="./product-pages/men-clothing.html" target="_blank"
+                        rel="noopener noreferrer">Men</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -128,7 +128,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/women-clothing.html" target="_blank" rel="noopener noreferrer">Women</a>
+                    <a class="nav-item-title" href="./product-pages/women-clothing.html" target="_blank"
+                        rel="noopener noreferrer">Women</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -169,7 +170,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/kid-clothing.html" target="_blank" rel="noopener noreferrer">Kids</a>
+                    <a class="nav-item-title" href="./product-pages/kid-clothing.html" target="_blank"
+                        rel="noopener noreferrer">Kids</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -210,7 +212,8 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item-title" href="./product-pages/kid-clothing.html" target="_blank" rel="noopener noreferrer">Sale</a>
+                    <a class="nav-item-title" href="./product-pages/kid-clothing.html" target="_blank"
+                        rel="noopener noreferrer">Sale</a>
                     <div class="sub-nav-box">
                         <ul class="sub-nav">
                             <li class="sub-nav-item">
@@ -301,7 +304,7 @@
                                                 <div class="select-line">
                                                     <label for="">Quantity: </label>
                                                     <select name="details-options-quantity"
-                                                        id="details-options-quantity">
+                                                        class="details-options-quantity">
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -342,7 +345,7 @@
                                 <div class="summary-box-line">
                                     <label for="">Subtotal</label>
                                     <div class="summary-box-money-items">
-                                        <span class="money" id="sub-total">1,119,000</span>
+                                        <span class="money" id="sub-total">1</span>
                                         <span class="unit-money">đ</span>
                                     </div>
                                 </div>
@@ -359,12 +362,13 @@
                                 <div class="summary-box-line">
                                     <label for="">Total</label>
                                     <div class="summary-box-money-items">
-                                        <span class="money" id="total">1,119,000</span>
+                                        <span class="money" id="total"></span>
                                         <span class="unit-money">đ</span>
                                     </div>
                                 </div>
                                 <div class="line-seperate"></div>
                             </div>
+                            <button id="checkout-btn">Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -374,17 +378,17 @@
                             You Might Also Like
                         </section>
                         <div class="items">
-                            <a href="#">
+                            <a href="./product-pages/women-clothing.html">
                                 <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b62f7bd2-da50-418b-ba36-2eef2728c37f/dri-fit-trail-short-sleeve-tee-PVG0Zd.png"
                                     alt="">
                                 <button class="pegasus-types-btn ">Women's</button>
                             </a>
-                            <a href="#">
+                            <a href="./product-pages/men-clothing.html">
                                 <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/042982f6-b876-43c9-bcb2-2326fd5aa036/jordan-flight-mvp-85-t-shirt-fKFszL.png"
                                     alt="">
                                 <button class="pegasus-types-btn ">Men's</button>
                             </a>
-                            <a href="#">
+                            <a href="./product-pages/kid-clothing.html">
                                 <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/92fb0812-e8f1-47cb-8137-cc9e29c655a6/sportswear-club-fleece-older-french-terry-short-sleeve-sweatshirt-g1xbt4.png"
                                     alt="">
                                 <button class="pegasus-types-btn ">Kid's</button>
@@ -547,7 +551,7 @@
             });
         }
     </script>
-    
+
     <script src="./js/add-to-bag.js"></script>
     <script src="./js/summary-bag.js"></script>
     <script>
@@ -557,6 +561,7 @@
             AddToBag();
             deleteBagItem();
             Summary();
+
         });
     </script>
     <script>
@@ -582,7 +587,6 @@
             signIn.textContent = "Sign In";
         }
     </script>
-
 
 </body>
 

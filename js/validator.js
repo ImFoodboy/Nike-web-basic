@@ -217,6 +217,15 @@ Validator.isEmail = function (selector, message) {
         }
     };
 }
+Validator.isTelePhoneNumber = function (selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            var regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            return regex.test(value) ? undefined :  message || '*Trường này phải là số điện thoại';
+        }
+    };
+}
 
 Validator.minLength = function (selector, min, message) {
     return {

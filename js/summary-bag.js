@@ -7,19 +7,27 @@ function Summary() {
     const totalElement = document.querySelector('#total');
     const noItemsElement = document.querySelector('#no-items');
     // Tinh tong tien
-    const pricesElements = document.querySelectorAll('.prices');
+
+
+    const checkOutBtn = document.querySelector('#checkout-btn');
+
+    var subTotal = 0;
 
     if (!noItemsElement) {
-        var subTotal = 0;
-        Array.from(pricesElements).forEach(element => {
-            subTotal += parseInt(element.textContent.replace(/,/g, ''));
-        });
+        const items = document.querySelectorAll('.bag-items');
+        const quantitiesChange = document.querySelectorAll('.details-options-quantity');
 
+
+
+        Array.from(items).forEach(item => {
+            var quantity = parseFloat(item.querySelector('.details-options-quantity').value);
+            var prices = parseFloat(item.querySelector('.prices').textContent.replace(/,/g, ''));
+
+            subTotal += quantity * prices;
+        });
         //Delivery-fee = 250,000đ
         var deliveryFee = 250000;
-
         deliveryFeeElement.innerHTML = deliveryFee.toLocaleString();
-
         //Đưa subTotal vao` element id= "sub-total"
 
         subTotalElement.innerHTML = subTotal.toLocaleString();
@@ -29,11 +37,51 @@ function Summary() {
         //Đưa subTotal vao` element id= "sub-total"
 
         totalElement.innerHTML = total.toLocaleString();
+
+        //Lắng nghe sự kiện thay đổi select của các phần tử quantity của các item
+        quantitiesChange.forEach(quantityElement => {
+            quantityElement.addEventListener("change", function () {
+                subTotal = 0;
+                Array.from(items).forEach(item => {
+                    var quantity = parseFloat(item.querySelector('.details-options-quantity').value);
+                    var prices = parseFloat(item.querySelector('.prices').textContent.replace(/,/g, ''));
+
+                    subTotal += quantity * prices;
+
+                    //Đưa subTotal vao` element id= "sub-total"
+
+                    subTotalElement.innerHTML = subTotal.toLocaleString();
+
+                    //Tính total = subtotal + delivery-fee
+                    total  = subTotal + deliveryFee;
+                    //Đưa subTotal vao` element id= "sub-total"
+
+                    totalElement.innerHTML = total.toLocaleString();
+                });
+            });
+        });
+
+        checkOutBtn.removeAttribute('disabled');
+        checkOutBtn.style.cursor = "pointer";
+
+        checkOutBtn.onclick = function (e) {
+            e.preventDefault();//bỏ action mặc định
+
+            sessionStorage.setItem('subTotal', subTotal.toString());
+            sessionStorage.setItem('total', total.toString());
+            sessionStorage.setItem('deliveryFee', deliveryFee.toString());
+
+            window.location.href = 'checkout.html';
+        }
     }
     else {
         deliveryFeeElement.innerHTML = "0";
         subTotalElement.innerHTML = "0";
         totalElement.innerHTML = "0";
+
+        checkOutBtn.setAttribute('disabled', 'disabled');
+        checkOutBtn.classList.add('disabled');
+        checkOutBtn.setAttribute("style", "background-color: #edededcc !important; color: #cccc !important;");
     }
 }
 
